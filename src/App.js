@@ -4,7 +4,7 @@ import './App.css';
 class App extends React.Component {
 
   componentDidMount () {
-    fetch ('http://localhost:3000/api/v1/books', {
+    fetch ('http://localhost:3000/api/v1/books/1/reviews', {
       method: 'GET'
     })
     .then(response => response.json())
