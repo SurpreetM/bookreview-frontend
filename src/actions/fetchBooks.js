@@ -7,4 +7,4 @@ export const fetchBooks = () => {
         dispatch({ type: 'ADD_BOOKS', books: responseJSON })
       })
     }
-  }
+}

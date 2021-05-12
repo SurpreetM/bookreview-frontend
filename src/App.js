@@ -15,6 +15,7 @@ class App extends React.Component {
   //  .then(data => console.log(data))
   //}
 
+  // Need to move this to the books container
   componentDidMount() {
     this.props.fetchBooks()
   }
@@ -28,6 +29,7 @@ class App extends React.Component {
   }
 }
 
+// Need to move this to the books container
 const mapDispatchToProps = dispatch => {
   return {
     fetchBooks: () => dispatch(fetchBooks())
