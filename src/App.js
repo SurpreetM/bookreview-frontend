@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { fetchBooks } from './actions/fetchBooks';
+import BooksContainer from './containers/BooksContainer'
 
 
 class App extends React.Component {
@@ -16,14 +17,15 @@ class App extends React.Component {
   //}
 
   // Need to move this to the books container
-  componentDidMount() {
-    this.props.fetchBooks()
-  }
+  //componentDidMount() {
+  //  this.props.fetchBooks()
+  //}
 
   render () {
     return (
       <div className="App">
         App
+        <BooksContainer/>
       </div>
     )
   }
@@ -42,4 +44,4 @@ function mapStateToProps(state){
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
