@@ -24,16 +24,18 @@ class BooksContainer extends React.Component {
 
 }
 
+// Decide whether to use arrow syntax or not 
+
     const mapDispatchToProps = dispatch => {
         return {
           fetchBooks: () => dispatch(fetchBooks())
         }
       }
       
-      function mapStateToProps(state){
+      function mapStateToProps(state) {
         console.log(state)
         return {books: state.books}
       }
       
       
-      export default connect(mapStateToProps,{fetchBooks}) (BooksContainer);
+      export default connect(mapStateToProps,mapDispatchToProps) (BooksContainer);
