@@ -1,4 +1,6 @@
 import React from 'react'
+import {Book} from './Book'
+
 
 
 const BookList = (props) => {
@@ -6,7 +8,7 @@ const BookList = (props) => {
     return (
         <div>
             {props.books.map (book => 
-            <li key= {book.id}> {book.title} {book.average_rating}/10</li>)}         
+             <Book book={book}/>)}         
         </div>
     )
 
