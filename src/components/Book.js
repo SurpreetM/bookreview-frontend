@@ -4,7 +4,7 @@ export const Book = (props) => {
     console.log(props)
     return (
         
-        <li> {props.book.title}, {props.book.average_rating}/10 </li>
+        <div> Book Details </div>
         
     )
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Book} from './Book'
+import {Route, Link} from 'react-router-dom'
 
 
 
@@ -8,7 +9,9 @@ const BookList = (props) => {
     return (
         <div>
             {props.books.map (book => 
-             <Book book={book}/>)}         
+              <li key={book.id}> 
+                <Link to={`/books/${book.id}`}> {book.title}, {book.average_rating}/10 </Link> </li> 
+                )}        
         </div>
     )
 
