@@ -21,11 +21,11 @@ class BookInput extends React.Component {
         console.log(this.state)
         this.props.addBook(this.state)
         
-        //this.setState({
-        //  title: '',
-        //  author: '',
-        //  genre: '',
-        //})
+        this.setState({
+          title: '',
+          author: '',
+          genre: '',
+        })
       }
     
 
@@ -44,8 +44,8 @@ class BookInput extends React.Component {
 }
 const mapDispatchToProps = dispatch => {
     return {
-      addBook: () => dispatch(addBook())
+      addBook: (data) => dispatch(addBook(data))
     }
 }
 
-export default connect (null, {addBook}) (BookInput)
+export default connect (null, mapDispatchToProps) (BookInput)

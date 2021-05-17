@@ -2,14 +2,14 @@ import React from 'react'
 
 
 const BookList = (props) => {
-
+    console.log(props)
     return (
         <div>
             {props.books.map (book => 
             <li key= {book.id}> {book.title} {book.average_rating}/10</li>)}         
         </div>
     )
-    
+
 }
 
 

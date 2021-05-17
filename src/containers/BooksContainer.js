@@ -33,7 +33,7 @@ class BooksContainer extends React.Component {
       }
       
       function mapStateToProps(state) {
-        console.log(state)
+        console.log(state.books)
         return {books: state.books}
       }
       

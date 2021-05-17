@@ -15,9 +15,10 @@ export default function bookReducer(state = {books: [], loading: false}, action)
             }
 
         case 'ADD_NEW_BOOK':
-            console.log(action.payload)
+            console.log(action.book)
             return {
-
+                ...state,
+                books: [...state.books, action.book]
             }
             
         default:

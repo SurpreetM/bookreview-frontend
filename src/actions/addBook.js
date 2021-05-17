@@ -15,7 +15,7 @@ export const addBook = (data) => {
         body: JSON.stringify(data)
       })
       .then(response => response.json())
-      .then(book => console.log(book))
+      .then(book => dispatch({type: 'ADD_NEW_BOOK', book: book}))
+      
     }
-  
-  }
+}
