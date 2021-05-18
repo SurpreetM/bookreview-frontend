@@ -16,9 +16,9 @@ class BooksContainer extends React.Component {
         return (
             <div> 
                 <p> Books Container</p>
-                <Route exact path='books/new' component = {BookInput}/>
+                <Route exact path='/books/new' component = {BookInput}/>
                 <Route exact path='/books' render = {() => <BookList books={this.props.books}/> }/>
-                <Route exact path='/books/:id' render={() => <Book books={this.props.books}/>}/>
+                <Route exact path='/books/:id' render={(routerProps) => <Book {...routerProps} books={this.props.books}/>}/>
                 
                 
             </div>
@@ -36,7 +36,7 @@ class BooksContainer extends React.Component {
         }
       }
       
-      function mapStateToProps(state) {
+    function mapStateToProps(state) {
         console.log(state.books)
         return {books: state.books}
       }
