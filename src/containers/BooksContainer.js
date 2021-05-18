@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import { fetchBooks } from '../actions/fetchBooks';
 import BookList from '../components/BookList.js'
 import BookInput from '../components/BookInput.js'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {Book} from '../components/Book'
 
 class BooksContainer extends React.Component {
@@ -15,12 +15,11 @@ class BooksContainer extends React.Component {
     render() {
         return (
             <div> 
-                <p> Books Container</p>
+                <Switch>
                 <Route exact path='/books/new' component = {BookInput}/>
                 <Route exact path='/books' render = {() => <BookList books={this.props.books}/> }/>
-                <Route exact path='/books/:id' render={(routerProps) => <Book {...routerProps} books={this.props.books}/>}/>
-                
-                
+                <Route exact path='/books/:id' render={(routerProps) => <Book {...routerProps} books={this.props.books}/>}/> 
+                </Switch>        
             </div>
             
         ) 

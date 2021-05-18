@@ -1,4 +1,5 @@
 import React from 'react'
+import ReviewsContainer from '../containers/ReviewsContainer'
 
 export const Book = (props) => {
 
@@ -13,6 +14,7 @@ export const Book = (props) => {
             <h1>{book? book.title : null }</h1> 
             <p> Author: {book? book.author : null} </p> 
             <p>Genre: {book? book.genre : null}</p>
+            <ReviewsContainer book={book}/>
         </div>
     )
 

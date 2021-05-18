@@ -1,6 +1,5 @@
 import React from 'react'
-import {Book} from './Book'
-import {Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 
