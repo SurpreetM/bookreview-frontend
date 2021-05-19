@@ -20,6 +20,17 @@ export default function bookReducer(state = {books: [], loading: false}, action)
                 ...state,
                 books: [...state.books, action.book]
             }
+
+        case 'ADD_NEW_REVIEW':
+            console.log(action.book)
+            let books = state.books.map(book => {
+                if (book.id === action.book.id) {
+                  return action.book
+                } else {
+                  return book
+                }
+              })
+            return {...state, books: books}
             
         default:
             return state 

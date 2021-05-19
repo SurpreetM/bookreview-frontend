@@ -11,8 +11,15 @@ export const addReview = (data, bookId) => {
           body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(review => console.log(review))
-    }
+        .then(book => { 
+          if (book.error) {
+              alert(book.error)
+          } else {
+              alert (`Thank you for your review!`)
+              dispatch({type: 'ADD_NEW_REVIEW', book: book})
+          }
+          
+        })}
 
     
 
