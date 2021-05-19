@@ -21,7 +21,7 @@ class BookInput extends React.Component {
         console.log(this.state)
         this.props.addBook(this.state)
 
-        alert (`You are adding ${this.state.title}`)
+        //alert (`You are adding ${this.state.title}`)
         
         this.setState({
           title: '',

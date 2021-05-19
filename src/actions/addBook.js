@@ -15,7 +15,13 @@ export const addBook = (data) => {
         body: JSON.stringify(data)
       })
       .then(response => response.json())
-      .then(book => dispatch({type: 'ADD_NEW_BOOK', book: book}))
-      
+      .then(book => { 
+        if (book.error) {
+            alert(book.error)
+        } else {
+            alert (`You are adding ${book.title}`)
+            dispatch({type: 'ADD_NEW_BOOK', book: book})
+        }
+        
+      })}
     }
-}
