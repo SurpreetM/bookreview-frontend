@@ -3,8 +3,11 @@
 //}
 
 
-export const addBook = (data) => {
+
+
+export const addBook = (data, history) => {
     console.log(data)
+    
     return (dispatch) => {
       fetch('http://localhost:3000/api/v1/books', {
         headers: {

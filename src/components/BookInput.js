@@ -1,8 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { addBook } from '../actions/addBook';
+//import { useHistory } from "react-router-dom"
 
 class BookInput extends React.Component {
+
+    
 
     state = {
         title: '',
@@ -20,8 +23,6 @@ class BookInput extends React.Component {
         event.preventDefault()
         console.log(this.state)
         this.props.addBook(this.state)
-
-        //alert (`You are adding ${this.state.title}`)
         
         this.setState({
           title: '',
@@ -44,7 +45,12 @@ class BookInput extends React.Component {
       </div>
         )
     }
+
+     
 }
+
+
+
 const mapDispatchToProps = dispatch => {
     return {
       addBook: (data) => dispatch(addBook(data))
