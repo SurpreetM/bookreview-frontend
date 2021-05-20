@@ -3,7 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import { fetchBooks } from './actions/fetchBooks';
 import BooksContainer from './containers/BooksContainer'
-
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 class App extends React.Component {
 
@@ -23,25 +23,14 @@ class App extends React.Component {
 
   render () {
     return (
+      
       <div className="App">
-        App
+        <Jumbotron>
+        <p className="heading"> Book Reviews </p>
         <BooksContainer/>
+        </Jumbotron>
       </div>
     )
   }
 }
-
-// Need to move this to the books container
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchBooks: () => dispatch(fetchBooks())
-  }
-}
-
-function mapStateToProps(state){
-  console.log(state)
-  return {books: state.books}
-}
-
-
 export default App;

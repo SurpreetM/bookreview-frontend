@@ -15,10 +15,10 @@ class ReviewList extends React.Component {
         return (
             
             <div>
-                Review List 
+                <h2>All Reviews</h2> 
                 {this.props.reviews && this.props.reviews.map (review => 
-                    <li key={review.id}> {review.rating}/10 {review.comments} 
-                    <button onClick={() => this.handleDelete(review)}> Delete </button> </li>
+                    <li key={review.id}> {review.rating}/10 "{review.comments}" 
+                    <button className="delete" onClick={() => this.handleDelete(review)}> Delete </button> </li>
                 )} 
             </div>
             

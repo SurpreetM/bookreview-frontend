@@ -8,7 +8,7 @@ const BookList = (props) => {
     return (
         <div>
             {props.books.map (book => 
-              <li key={book.id}> 
+              <li class="color-with-marker" key={book.id}> 
                 <Link to={`/books/${book.id}`}> {book.title}, {book.average_rating}/10 </Link> </li> 
                 )}        
         </div>

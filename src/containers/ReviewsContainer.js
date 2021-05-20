@@ -12,7 +12,7 @@ class ReviewsContainer extends React.Component {
     render () {
         console.log(this.props)
         return (
-            <div>Reviews Container
+            <div>
             <ReviewList reviews={this.props.book && this.props.book.reviews}/>
             <ReviewInput book={this.props.book}/>
             </div>

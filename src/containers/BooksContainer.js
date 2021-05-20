@@ -5,16 +5,18 @@ import BookList from '../components/BookList.js'
 import BookInput from '../components/BookInput.js'
 import {Route, Switch} from 'react-router-dom'
 import {Book} from '../components/Book'
+import NavBar from '../components/NavBar'
 
 class BooksContainer extends React.Component {
 
     componentDidMount() {
         this.props.fetchBooks()
-      }
+    }
 
     render() {
         return (
-            <div> 
+            <div>
+                <NavBar/> 
                 <Switch>
                 <Route exact path='/books/new' component = {BookInput}/>
                 <Route exact path='/books' render = {() => <BookList books={this.props.books}/> }/>

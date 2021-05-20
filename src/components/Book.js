@@ -12,10 +12,16 @@ export const Book = (props) => {
     
     return (    
         <div> 
-            <h1>{book? book.title : null }</h1> 
-            <p> Author: {book? book.author : null} </p> 
-            <p>Genre: {book? book.genre : null}</p>
-            <p>Average Rating: {book? book.average_rating : null}</p>
+            <p className="heading2">{book? book.title : null }</p> 
+            <p className="details" > 
+            Author: {book? book.author : null}
+            </p>
+            <p className="details" > 
+            Genre: {book? book.genre : null}
+            </p>
+            <p className="details" > 
+            Average Rating: {book? book.average_rating : null}
+            </p>
             <ReviewsContainer book={book}/>
         </div>
     )
