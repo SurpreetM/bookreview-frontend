@@ -20,10 +20,10 @@ class ReviewInput extends React.Component {
         console.log(this.state, this.props.book.id)
         this.props.addReview(this.state, this.props.book.id)
         this.setState({
-            title: '',
-            author: '',
-            genre: '',
+            rating: '',
+            comments: ''      
           })
+          
 
     }
 

@@ -21,7 +21,7 @@ export default function bookReducer(state = {books: [], loading: false}, action)
                 books: [...state.books, action.book]
             }
 
-        case 'ADD_NEW_REVIEW':
+        case 'ADD_OR_DELETE_REVIEW':
             console.log(action.book)
             let books = state.books.map(book => {
                 if (book.id === action.book.id) {
@@ -31,17 +31,6 @@ export default function bookReducer(state = {books: [], loading: false}, action)
                 }
               })
             return {...state, books: books}
-
-        case 'DELETE_REVIEW':
-            console.log(action.book)
-            let books2 = state.books.map(book => {
-                if (book.id === action.book.id) {
-                    return action.book
-                } else {
-                    return book
-                }
-            })
-            return {...state, books: books2}
             
         default:
             return state 

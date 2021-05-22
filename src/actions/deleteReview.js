@@ -6,7 +6,7 @@ export const deleteReview = (reviewId, bookId) => {
           method: 'DELETE'
         })
         .then(response => response.json())
-        .then(book => dispatch({type: 'DELETE_REVIEW', book: book}))
+        .then(book => dispatch({type: 'ADD_OR_DELETE_REVIEW', book: book}))
       }
 
 }

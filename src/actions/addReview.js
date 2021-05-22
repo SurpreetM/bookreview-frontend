@@ -16,7 +16,7 @@ export const addReview = (data, bookId) => {
               alert(book.error)
           } else {
               alert (`Thank you for your review!`)
-              dispatch({type: 'ADD_NEW_REVIEW', book: book})
+              dispatch({type: 'ADD_OR_DELETE_REVIEW', book: book})
           }
           
         })}
