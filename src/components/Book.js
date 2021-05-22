@@ -20,7 +20,7 @@ export const Book = (props) => {
             Genre: {book? book.genre : null}
             </p>
             <p className="details" > 
-            Average Rating: {book? book.average_rating : null}
+            Average Rating: {book? Math.round(book.average_rating*100)/100 : null}
             </p>
             <ReviewsContainer book={book}/>
         </div>

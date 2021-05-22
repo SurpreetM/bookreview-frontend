@@ -9,7 +9,7 @@ const BookList = (props) => {
         <div>
             {props.books.map (book => 
               <li key={book.id}> 
-                <Link to={`/books/${book.id}`}> {book.title}, {book.average_rating}/10 </Link> </li> 
+                <Link to={`/books/${book.id}`}> {book.title}, {Math.round(book.average_rating*100)/100}/10 </Link> </li> 
                 )}        
         </div>
     )
