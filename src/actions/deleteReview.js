@@ -1,6 +1,7 @@
-export const deleteReview = (reviewId, bookId) => {
+// Functional component (3)
 
-    console.log(reviewId, bookId)
+export const deleteReview = (reviewId, bookId) => {
+    //console.log(reviewId, bookId)
     return (dispatch) => {
         return fetch(`http://localhost:3000/api/v1/books/${bookId}/reviews/${reviewId}`, {
           method: 'DELETE'

@@ -11,7 +11,7 @@ class ReviewList extends React.Component {
     }
 
     render() {
-        console.log(this.props.reviews)
+        //console.log(this.props.reviews)
         return (
             
             <div>

@@ -1,11 +1,6 @@
-//export const addBook = () => {
-//    console.log("You are in the action creator")
-//}
+// Functional component (1)
 
-
-
-
-export const addBook = (data, history) => {
+export const addBook = (data) => {
     console.log(data)
     
     return (dispatch) => {
@@ -24,6 +19,7 @@ export const addBook = (data, history) => {
         } else {
             alert (`You are adding ${book.title}`)
             dispatch({type: 'ADD_NEW_BOOK', book: book})
+            
         }
         
       })}

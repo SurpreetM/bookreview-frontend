@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import { connect } from 'react-redux';
-import { fetchBooks } from './actions/fetchBooks';
 import BooksContainer from './containers/BooksContainer'
 import Jumbotron from 'react-bootstrap/Jumbotron';
 

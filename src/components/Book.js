@@ -1,14 +1,12 @@
-import React from 'react'
+// Functional Component (5)
+
 import ReviewsContainer from '../containers/ReviewsContainer'
 
 export const Book = (props) => {
 
-    console.log(props.match.params.id)
-
-        //let book = props.books[props.match.params.title] 
-        let book = props.books.filter(book => book.id == props.match.params.id)[0]
-    
-    console.log(book)
+    //console.log(props.match.params.id)
+        let book = props.books.filter(book => book.id == props.match.params.id)[0]  
+    //console.log(book)
     
     return (    
         <div> 

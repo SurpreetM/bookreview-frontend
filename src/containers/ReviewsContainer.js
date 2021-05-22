@@ -2,24 +2,32 @@ import React from 'react'
 import ReviewInput from '../components/ReviewInput'
 import ReviewList from '../components/ReviewList'
 
-
-// We might be able to refactor this into a funtional component
-// It may not need to pull information from the react store
-// As the review could be passed as props from the Book component
-
-class ReviewsContainer extends React.Component { 
-
-    render () {
-        console.log(this.props)
-        return (
-            <div>
-            <ReviewList reviews={this.props.book && this.props.book.reviews}/>
-            <ReviewInput book={this.props.book}/>
-            </div>
-        )
-    }
-
-
+const ReviewsContainer = (props) => {
+    //console.log(props)
+    return (
+       
+        <div>
+            <ReviewList reviews={props.book && props.book.reviews}/>
+            <ReviewInput book={props.book}/>
+        </div>
+    )
 }
 
 export default ReviewsContainer
+
+//class ReviewsContainer extends React.Component { 
+
+//    render () {
+//        console.log(this.props)
+//        return (
+//            <div>
+//            <ReviewList reviews={this.props.book && this.props.book.reviews}/>
+//            <ReviewInput book={this.props.book}/>
+//            </div>
+//        )
+//    }
+
+
+//}
+
+//export default ReviewsContainer

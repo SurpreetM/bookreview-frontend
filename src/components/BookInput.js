@@ -1,11 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { addBook } from '../actions/addBook';
-//import { useHistory } from "react-router-dom"
+
 
 class BookInput extends React.Component {
-
-    
 
     state = {
         title: '',
@@ -29,8 +27,6 @@ class BookInput extends React.Component {
           author: '',
           genre: '',
         })
-        
-        
       }
     
 
@@ -46,9 +42,7 @@ class BookInput extends React.Component {
         </form>
       </div>
         )
-    }
-
-     
+    }     
 }
 
 

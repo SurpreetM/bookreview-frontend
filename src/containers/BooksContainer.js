@@ -30,17 +30,17 @@ class BooksContainer extends React.Component {
 
 }
 
-// Decide whether to use arrow syntax or not 
-
     const mapDispatchToProps = dispatch => {
         return {
           fetchBooks: () => dispatch(fetchBooks())
         }
       }
       
-    function mapStateToProps(state) {
-        console.log(state.books)
-        return {books: state.books}
+    const mapStateToProps = state => {
+        //console.log(state.books)
+        return {
+          books: state.books
+        }
       }
       
       

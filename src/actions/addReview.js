@@ -1,6 +1,7 @@
-export const addReview = (data, bookId) => {
+// Functional component (2)
 
-    console.log(data, bookId)
+export const addReview = (data, bookId) => {
+    //console.log(data, bookId)
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/books/${bookId}/reviews`, {
           headers: {

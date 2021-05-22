@@ -22,9 +22,7 @@ class ReviewInput extends React.Component {
         this.setState({
             rating: '',
             comments: ''      
-          })
-          
-
+          })       
     }
 
     render() {

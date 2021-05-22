@@ -1,3 +1,5 @@
+// Functional component (4)
+
 export const fetchBooks = () => {
     return (dispatch) => {
       dispatch({ type: 'LOADING_BOOKS'})
