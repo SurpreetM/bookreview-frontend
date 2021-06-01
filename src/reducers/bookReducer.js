@@ -1,3 +1,5 @@
+//import { Redirect } from "react-router-dom"
+
 export default function bookReducer(state = {books: [], loading: false}, action) { 
     switch (action.type) {
         case 'LOADING_BOOKS':
@@ -18,8 +20,11 @@ export default function bookReducer(state = {books: [], loading: false}, action)
             console.log(action.book)
             return {
                 ...state,
-                books: [...state.books, action.book]
+                books: [...state.books, action.book]   
             }
+             
+           
+
 
         case 'ADD_OR_DELETE_REVIEW':
             console.log(action.book)

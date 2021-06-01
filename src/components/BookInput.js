@@ -9,6 +9,7 @@ class BookInput extends React.Component {
         title: '',
         author: '',
         genre: '', 
+        redirect: ''
       }
 
     handleChange = (event) => {

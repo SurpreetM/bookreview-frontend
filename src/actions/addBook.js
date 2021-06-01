@@ -1,4 +1,5 @@
 // Functional component (1)
+import { Redirect } from "react-router-dom"
 
 export const addBook = (data) => {
     console.log(data)
@@ -19,7 +20,7 @@ export const addBook = (data) => {
         } else {
             alert (`You are adding ${book.title}`)
             dispatch({type: 'ADD_NEW_BOOK', book: book})
-            
+             
         }
         
       })}

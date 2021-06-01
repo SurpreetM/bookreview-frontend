@@ -6,8 +6,10 @@ class ReviewList extends React.Component {
 
     state = {}
 
-    handleDelete = (review) => {
-    this.props.deleteReview(review.id, review.book_id)
+    handleDelete (review) {
+        console.log('a')
+        this.props.deleteReview(review.id, review.book_id)
+        console.log('f')
     }
 
     render() {
